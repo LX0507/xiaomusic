@@ -56,33 +56,6 @@ docker run -p 58090:8090 -v /xiaomusic_music:/app/music -v /xiaomusic_conf:/app/
 
 遇到问题可以去 web 设置页面底部点击【下载日志文件】按钮，然后搜索一下日志文件内容确保里面没有账号密码信息后(有就删除这些敏感信息)，然后在提 issues 反馈问题时把下载的日志文件带上。
 
-> [!TIP]
-> 作者新写了一个更简洁的个人音乐服务器，支持更强的插件扩展 <https://github.com/mimusic-org/mimusic>
-
-> [!TIP]
-> - 适用于 NAS 上安装的开源工具： <https://github.com/hanxi/tiny-nav>
-> - 适用于 NAS 上安装的网页打印机： <https://github.com/hanxi/cups-web>
-> - PVE 移动端 UI 界面：<https://github.com/hanxi/pve-touch>
-> - 喜欢听书的可以配合这个工具使用 <https://github.com/hanxi/epub2mp3>
-
-> [!TIP]
->
-> - 🔥【广告:可用于安装 frp 实现内网穿透】
-> - 🔥 海外 RackNerd VPS 机器推荐，可支付宝付款。
-> - <a href="https://my.racknerd.com/aff.php?aff=11177"><img src="https://racknerd.com/banners/320x50.gif" alt="RackNerd Mobile Leaderboard Banner" width="320" height="50"></a>
-> - 不知道选哪个套餐可以直接买这个最便宜的 <https://my.racknerd.com/aff.php?aff=11177&pid=923>
-> - 也可以用来部署代理，docker 部署方法见 <https://github.com/hanxi/blog/issues/96>
-
-> [!TIP]
->
-> - 🔥【广告: 搭建您的专属大模型主页
-告别繁琐配置难题，一键即可畅享稳定流畅的AI体验！】<https://university.aliyun.com/mobile?userCode=szqvatm6>
-
-> [!TIP]
-> - 免费主机
-> - <a href="https://dartnode.com?aff=SnappyPigeon570"><img src="https://dartnode.com/branding/DN-Open-Source-sm.png" alt="Powered by DartNode - Free VPS for Open Source" width="320"></a>
-
-
 ## 🎤 功能特性
 
 ### 🤐 支持语音口令
