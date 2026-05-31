@@ -1,26 +1,5 @@
 # XiaoMusic: 无限听歌，解放小爱音箱
 
-> [!IMPORTANT]
-> **📢 项目停止维护通知**
->
-> 因个人精力有限，需将重心转移到其他项目，本项目将停止维护，不再接受新功能开发与 bug 修复，已有 issue 与 PR 也不再处理。
->
-> 后续推荐使用社区接力项目：**[songloft-org/songloft](https://github.com/songloft-org/songloft)**，欢迎大家迁移、参与共建。
->
-> 衷心感谢一路以来所有用户的支持与陪伴 ❤️
-
-[![GitHub License](https://img.shields.io/github/license/hanxi/xiaomusic)](https://github.com/hanxi/xiaomusic)
-[![Docker Image Version](https://img.shields.io/docker/v/hanxi/xiaomusic?sort=semver&label=docker%20image)](https://hub.docker.com/r/hanxi/xiaomusic)
-[![Docker Pulls](https://img.shields.io/docker/pulls/hanxi/xiaomusic)](https://hub.docker.com/r/hanxi/xiaomusic)
-[![PyPI - Version](https://img.shields.io/pypi/v/xiaomusic)](https://pypi.org/project/xiaomusic/)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/xiaomusic)](https://pypi.org/project/xiaomusic/)
-[![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fhanxi%2Fxiaomusic%2Fmain%2Fpyproject.toml)](https://pypi.org/project/xiaomusic/)
-[![GitHub Release](https://img.shields.io/github/v/release/hanxi/xiaomusic)](https://github.com/hanxi/xiaomusic/releases)
-[![Visitors](https://api.visitorbadge.io/api/daily?path=hanxi%2Fxiaomusic&label=daily%20visitor&countColor=%232ccce4&style=flat)](https://visitorbadge.io/status?path=hanxi%2Fxiaomusic)
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=hanxi%2Fxiaomusic&label=total%20visitor&countColor=%232ccce4&style=flat)](https://visitorbadge.io/status?path=hanxi%2Fxiaomusic)
-
----
-
 <p align="center">
   <strong>🎵 使用小爱音箱播放音乐，音乐使用 yt-dlp 下载</strong>
 </p>
@@ -44,37 +23,7 @@
 ```yaml
 services:
   xiaomusic:
-    image: hanxi/xiaomusic
-    container_name: xiaomusic
-    restart: always
-    ports:
-      - 58090:8090
-    volumes:
-      - /xiaomusic_music:/app/music
-      - /xiaomusic_conf:/app/conf
-```
-
-🔥 国内：
-
-```yaml
-services:
-  xiaomusic:
-    image: docker.hanxi.cc/hanxi/xiaomusic
-    container_name: xiaomusic
-    restart: always
-    ports:
-      - 58090:8090
-    volumes:
-      - /xiaomusic_music:/app/music
-      - /xiaomusic_conf:/app/conf
-```
-
-测试版：
-
-```yaml
-services:
-  xiaomusic:
-    image: hanxi/xiaomusic:main
+    image: ghcr.io/lx0507/xiaomusic
     container_name: xiaomusic
     restart: always
     ports:
@@ -87,19 +36,7 @@ services:
 对应的 docker 启动命令如下:
 
 ```bash
-docker run -p 58090:8090 -v /xiaomusic_music:/app/music -v /xiaomusic_conf:/app/conf hanxi/xiaomusic
-```
-
-🔥 国内：
-
-```bash
-docker run -p 58090:8090 -v /xiaomusic_music:/app/music -v /xiaomusic_conf:/app/conf docker.hanxi.cc/hanxi/xiaomusic
-```
-
-测试版：
-
-```
-docker run -p 58090:8090 -v /xiaomusic_music:/app/music -v /xiaomusic_conf:/app/conf hanxi/xiaomusic:main
+docker run -p 58090:8090 -v /xiaomusic_music:/app/music -v /xiaomusic_conf:/app/conf ghcr.io/lx0507/xiaomusic
 ```
 
 - 其中 conf 目录为配置文件存放目录，music 目录为音乐存放目录，建议分开配置为不同的目录。
@@ -112,33 +49,6 @@ docker run -p 58090:8090 -v /xiaomusic_music:/app/music -v /xiaomusic_conf:/app/
 > docker 和 docker compose 二选一即可，启动成功后，在 web 页面可以配置其他参数，带有 `*` 号的配置是必须要配置的，其他的用不上时不用修改。初次配置时需要在页面上输入小米账号和密码保存后才能获取到设备列表。
 
 遇到问题可以去 web 设置页面底部点击【下载日志文件】按钮，然后搜索一下日志文件内容确保里面没有账号密码信息后(有就删除这些敏感信息)，然后在提 issues 反馈问题时把下载的日志文件带上。
-
-> [!TIP]
-> 作者新写了一个更简洁的个人音乐服务器，支持更强的插件扩展 <https://github.com/mimusic-org/mimusic>
-
-> [!TIP]
-> - 适用于 NAS 上安装的开源工具： <https://github.com/hanxi/tiny-nav>
-> - 适用于 NAS 上安装的网页打印机： <https://github.com/hanxi/cups-web>
-> - PVE 移动端 UI 界面：<https://github.com/hanxi/pve-touch>
-> - 喜欢听书的可以配合这个工具使用 <https://github.com/hanxi/epub2mp3>
-
-> [!TIP]
->
-> - 🔥【广告:可用于安装 frp 实现内网穿透】
-> - 🔥 海外 RackNerd VPS 机器推荐，可支付宝付款。
-> - <a href="https://my.racknerd.com/aff.php?aff=11177"><img src="https://racknerd.com/banners/320x50.gif" alt="RackNerd Mobile Leaderboard Banner" width="320" height="50"></a>
-> - 不知道选哪个套餐可以直接买这个最便宜的 <https://my.racknerd.com/aff.php?aff=11177&pid=923>
-> - 也可以用来部署代理，docker 部署方法见 <https://github.com/hanxi/blog/issues/96>
-
-> [!TIP]
->
-> - 🔥【广告: 搭建您的专属大模型主页
-告别繁琐配置难题，一键即可畅享稳定流畅的AI体验！】<https://university.aliyun.com/mobile?userCode=szqvatm6>
-
-> [!TIP]
-> - 免费主机
-> - <a href="https://dartnode.com?aff=SnappyPigeon570"><img src="https://dartnode.com/branding/DN-Open-Source-sm.png" alt="Powered by DartNode - Free VPS for Open Source" width="320"></a>
-
 
 ## 🎤 功能特性
 
