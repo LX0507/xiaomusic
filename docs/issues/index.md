@@ -297,11 +297,10 @@ docker build -t xiaomusic .
 点击右上角的 ⭐ Star 按钮，让更多人发现这个项目
 
 ### 💰 赞赏支持
-- [💝 爱发电](https://afdian.com/a/imhanxi) - 持续支持项目发展
 - 扫码请作者喝杯奶茶 ☕
 
 <p align="center">
-  <img src="https://i.v2ex.co/7Q03axO5l.png" alt="赞赏码" width="300">
+  <img src="https://github.com/LX0507/xiaomusic/blob/9a75d5ab341be040439b0083b7d8f633837d1c01/xiaomusic/static/default/qrcode.png" alt="赞赏码" width="300">
 </p>
 
 ### 🎁 其他支持方式
